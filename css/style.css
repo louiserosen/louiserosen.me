@@ -6286,8 +6286,8 @@ button.close {
   }
 }
 body {
-  font-size: 18px;
-}
-body .test {
   font-family: sans-serif;
+}
+h1 {
+  text-align: center;
 }
