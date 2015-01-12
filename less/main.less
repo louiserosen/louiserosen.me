@@ -94,6 +94,18 @@ nav.navbar.navbar-default {
 
 }
 
+form {
+  label.error {
+    display: none !important;
+  }
+  .error span {
+    color:@error;
+  }
+  input.error, textarea.error {
+    border: 1px solid @error;
+  }
+}
+
 .secondary-bg {
 	background: @grey;
   margin-bottom: 30px;

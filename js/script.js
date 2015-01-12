@@ -49,9 +49,9 @@ jQuery(document).ready(function($){
 			if (errors) {
 				var message;
 				if(errors === 1) {
-					message = 'Il manque un champ. Il a été surligné en rouge ci-dessous.';
+					message = 'You missed 1 field. It has been highlighted';
 				} else {
-					message = 'Il manque ' + errors + ' champs.  Ils ont été surlignés en rouge ci-dessous.';
+					message = 'You missed ' + errors + ' fields. They have been highlighted';
 				}
 				$("div.error span").html(message);
 				$("div.error").show();
@@ -62,7 +62,7 @@ jQuery(document).ready(function($){
 		submitHandler: function() {
 			$("div.error").hide();
 			if(formSent) {
-				alert('Votre message a déjà été envoyé.');
+				alert('You already sent the message.');
 			} else {
 				$('.form').ajaxSubmit();
 			}
@@ -82,7 +82,7 @@ $(document).on('submit', 'form.form', function(e) {
         data: $(this).serialize(),
         success: function() {
         	formSent = true;
-        	$('form.form').append('<div class="row success"><div class="col-md-12"><span> Votre message a bien été envoyé. </span></div></div>');
+        	$('form.form').append('<div class="row success"><div class="col-md-12"><span> Message sent. </span></div></div>');
         }
     });
     e.preventDefault();	
