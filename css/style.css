@@ -6344,6 +6344,16 @@ img.thumb {
 .project-box.hover .overlay {
   height: 100%;
 }
+form label.error {
+  display: none !important;
+}
+form .error span {
+  color: #ff6666;
+}
+form input.error,
+form textarea.error {
+  border: 1px solid #ff6666;
+}
 .secondary-bg {
   background: #F7F7F7;
 }
