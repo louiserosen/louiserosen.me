@@ -23,9 +23,9 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-navbar-collapse">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">Works</a></li>
-	        <li><a href="#">About</a></li>
-	        <li><a href="#">Contact</a></li>
+	        <li><a href="/">Works</a></li>
+	        <li><a href="/#about-me">About</a></li>
+	        <li><a href="/#contact">Contact</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -79,12 +79,12 @@
 	<div class="secondary-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-8 col-sm-offset-4">
+				<div id="about-me" class="col-sm-8 col-sm-offset-4">
 					<h2>About me <br>—</h2>
 
 					<p>Graduated from Graphic Design at ENSAV La Cambre, Brussels, after completing a BA Illustration at Saint-Luc, Brussels. I am currently in course at Interface3 to become a Webmaster and work as a freelance designer based in Brussels, looking for both work experience and collaboration opportunities. If you would like to know more about me or my work, do not hesitate to get in touch!</p>
 
-					<p>Download my Resume in <a href="nogo">French</a> or <a href="nogo">English</a> hier.</p>
+					<p>Download my Resume in <a href="files/CV_louise_rosen_FR.pdf">French</a> or <a href="files/CV_louise_rosen_EN.pdf">English</a> here.</p>
 
 					<br>
 					<br>
@@ -96,9 +96,34 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-4">
+			<div id="contact" class="col-sm-8 col-sm-offset-4">
 				<h2>Get in touch!<br>—</h2>
 				<p>Contact me</p>
+				<form class="form" method="post" action="submit.php">
+          <div class="row">
+            <div class="col-sm-12 error">
+              <span></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <input id="name" name="nom" type="text" placeholder="NOM" required> 
+            </div>
+            <div class="col-sm-6">
+              <input id="email" name="mail" type="email" placeholder="EMAIL" required>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <textarea id="message" name="message" id="" cols="30" rows="10" placeholder="MESSAGE" required></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <input type="submit" value="Submit">
+            </div>
+          </div>
+        </form>
 			</div>
 		</div> <!-- /.row -->
 	</div> <!-- /.container -->
@@ -114,6 +139,8 @@
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js"></script>
+	<script src="js/min/script-min.js"></script>
 </body>
 </html>
