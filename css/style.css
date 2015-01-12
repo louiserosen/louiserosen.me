@@ -6298,6 +6298,8 @@ input,
 textarea {
   outline: none;
   width: 100%;
+  background-color: #f7f7f7;
+  border: none;
 }
 input[type="submit"] {
   width: auto;
@@ -6307,6 +6309,9 @@ img.thumb {
 }
 .navbar.navbar-default .container {
   border-top: solid 4px black;
+}
+nav.navbar.navbar-default {
+  margin-bottom: 40px;
 }
 .project-box {
   margin-bottom: 10px;
@@ -6344,8 +6349,18 @@ img.thumb {
 .project-box.hover .overlay {
   height: 100%;
 }
+.project-box .info h3 {
+  font-size: 12px;
+  padding: 20px;
+}
+.project-box .info p {
+  font-size: 10px;
+  padding: 20px;
+}
 .secondary-bg {
-  background: #F7F7F7;
+  background: #f7f7f7;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 footer {
   text-align: center;
@@ -6379,4 +6394,8 @@ footer {
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
+}
+#footer-page {
+  height: 80px;
+  padding-top: 30px;
 }
