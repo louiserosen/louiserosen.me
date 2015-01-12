@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+	
 	// browser window scroll (in pixels) after which the "back to top" link is shown
 	var offset = 300,
 		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
@@ -8,15 +9,20 @@ jQuery(document).ready(function($){
 		//grab the "back to top" link
 		$back_to_top = $('.cd-top');
 
-	//hide or show the "back to top" link
-	$(window).scroll(function(){
-		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > offset_opacity ) { 
+	// hide or show the "back to top" link
+	$(window).scroll(function() {
+		if($(this).scrollTop() > offset) {
+			$back_to_top.addClass('cd-is-visible');
+		}
+		else {
+			$back_to_top.removeClass('cd-is-visible cd-fade-out');
+		}
+		if( $(this).scrollTop() > offset_opacity ) {
 			$back_to_top.addClass('cd-fade-out');
 		}
 	});
 
-	//smooth scroll to top
+	// smooth scroll to top
 	$back_to_top.on('click', function(event){
 		event.preventDefault();
 		$('body,html').animate({
@@ -24,5 +30,12 @@ jQuery(document).ready(function($){
 		 	}, scroll_top_duration
 		);
 	});
+
+	// project overlay
+  $(".project-box").mouseenter(function(){
+      $(this).addClass("hover");
+  }).mouseleave(function(){
+      $(this).removeClass("hover");
+  });
 
 });
