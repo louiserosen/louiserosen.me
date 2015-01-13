@@ -6329,8 +6329,9 @@ nav.navbar.navbar-default {
 .works {
   padding-bottom: 80px;
 }
+/* RESEAUX SOCIAUX */
 ul.social {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 ul.social li {
   padding-right: 30px;
@@ -6339,7 +6340,7 @@ ul.social img {
   width: 20px;
 }
 ul.social img:hover {
-  opacity: .7;
+  opacity: .6;
 }
 .about-me {
   padding: 80px 0;
@@ -6425,6 +6426,13 @@ form input[type="submit"]:hover {
   padding-left: 20px;
 }
 .project-desc .date {
+  font-size: 12px;
+}
+.project-desc .collaboration {
+  font-size: 12px;
+  color: #999999;
+}
+.project-desc .keywords {
   font-size: 12px;
 }
 .secondary-bg {
