@@ -7,8 +7,8 @@ $message .= "nom: ".$_POST['nom']."\n";
 $message .= "email: ".$_POST['mail']."\n";
 $message .= "message: ".$_POST['message']."\n";
 
-$headers = 'From: lse.rosen@louiserosen.dev' . "\r\n" .
-    'Reply-To: lse.rosen@louiserosen.dev' . "\r\n" .
+$headers = 'From: online-form@louiserosen.me' . "\r\n" .
+    'Reply-To: online-form@louiserosen.me' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($to, $subject, $message, $headers);
