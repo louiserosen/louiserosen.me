@@ -170,16 +170,26 @@ form {
 /* Projects */
 .project-desc {
   padding-left: 20px;
-
+  p {
+    
+  }
   .date {
+    font-style: italic;
     font-size: @font-size-small;
   }
   .collaboration{
-    font-size: @font-size-small;
     color: @grey2;
+    font-style: italic;
+    font-size: @font-size-small;
   }
   .keywords{
     font-size: @font-size-small;
+  }
+  .website {
+    font-size: @font-size-small;
+    a {
+      color: @grey2;
+    }
   }
 }
 
@@ -226,4 +236,14 @@ footer {
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+
+// Responsive fixes
+@media (max-width: @screen-xs-max) {
+  
+  .navbar .container, .container.about-me, .container.contact-me {
+    padding: 0 20px;
+  } 
+
 }
