@@ -1,4 +1,4 @@
-/*global alert:true */
+/*global alert:true, Modernizr:true */
 
 var formSent = false;
 
@@ -36,11 +36,34 @@ jQuery(document).ready(function($){
 	});
 
 	// project overlay
-  $(".project-box").mouseenter(function(){
-      $(this).addClass("hover");
-  }).mouseleave(function(){
-      $(this).removeClass("hover");
-  });
+  if (Modernizr.touch) {
+	  // show the close overlay button
+	  
+	  $(".close-overlay").removeClass("hidden");
+	  // handle the adding of hover class when clicked
+	  $(".project-box").click(function(){
+	      if (!$(this).hasClass("hover")) {
+	          $(this).addClass("hover");
+	      }
+	  });
+	  // handle the closing of the overlay
+	  $(".close-overlay").click(function(e){
+	      e.preventDefault();
+	      e.stopPropagation();
+	      if ($(this).closest(".project-box").hasClass("hover")) {
+	          $(this).closest(".project-box").removeClass("hover");
+	      }
+	  });
+	} else {
+	  // handle the mouseenter functionality
+	  $(".project-box").mouseenter(function(){
+	      $(this).addClass("hover");
+	  })
+	  // handle the mouseleave functionality
+	  .mouseleave(function(){
+	      $(this).removeClass("hover");
+	  });
+	}
 
   // form validation
 	$("form").validate({

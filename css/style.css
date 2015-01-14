@@ -6381,6 +6381,26 @@ ul.social img:hover {
   left: 0;
   z-index: 1;
 }
+.project-box .overlay a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.project-box .overlay a.close-overlay:hover {
+  text-decoration: none;
+}
 .project-box.hover .overlay {
   height: 100%;
 }
