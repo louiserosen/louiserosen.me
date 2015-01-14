@@ -6463,6 +6463,15 @@ form input[type="submit"]:hover {
 .project-desc .website a {
   color: #999999;
 }
+.project-desc .back {
+  display: block;
+  padding-top: 40px;
+  font-size: 18px;
+  color: #222222;
+}
+.project-desc .back a {
+  color: #222222;
+}
 .secondary-bg {
   background: #eeeeee;
   margin-top: 30px;
