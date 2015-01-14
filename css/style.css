@@ -6481,3 +6481,10 @@ footer {
   -moz-transition: opacity .3s 0s, visibility 0s .3s;
   transition: opacity .3s 0s, visibility 0s .3s;
 }
+@media (max-width: 767px) {
+  .navbar .container,
+  .container.about-me,
+  .container.contact-me {
+    padding: 0 20px;
+  }
+}
